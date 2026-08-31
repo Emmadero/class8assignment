@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BestBuy — Buy and Sell Cars in Nigeria</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="nav-closed">
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="logo">Best<span>Buy</span></a>
+
+      <nav class="main-nav">
+        <a href="#">Cars</a>
+        <a href="#">Brands</a>
+        <a href="#">Prices</a>
+        <a href="#">Sellers</a>
+        <a href="#">Blog</a>
+        <a href="#" class="mobile-only-link">Log in</a>
+        <a href="#" class="mobile-only-link">Post Ad</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#" class="btn btn-ghost">Log in</a>
+        <a href="#" class="btn btn-solid">Post Ad</a>
+      </div>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO / SEARCH ===== -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Nigeria's car marketplace</p>
+      <h1>Find your next car <br />on the Best.</h1>
+      <p class="hero-sub">
+        Thousands of foreign-used, Nigerian-used and brand new cars,
+        listed straight from verified sellers across the country.
+      </p>
+
+      <form class="search-panel" id="search-panel">
+        <div class="condition-tabs">
+          <label class="tab"><input type="radio" name="condition" checked /> All</label>
+          <label class="tab"><input type="radio" name="condition" /> Foreign Used</label>
+          <label class="tab"><input type="radio" name="condition" /> Nigerian Used</label>
+          <label class="tab"><input type="radio" name="condition" /> Brand New</label>
+        </div>
+
+        <div class="search-fields">
+          <div class="field">
+            <label for="keyword">Keyword</label>
+            <input type="text" id="keyword" placeholder="e.g. Toyota Camry" />
+          </div>
+
+          <div class="field">
+            <label for="make">Make &amp; Model</label>
+            <select id="make">
+              <option value="">All Models</option>
+              <option value="Toyota">Toyota</option>
+              <option value="Honda">Honda</option>
+              <option value="Mercedes Benz">Mercedes Benz</option>
+              <option value="Lexus">Lexus</option>
+              <option value="Hyundai">Hyundai</option>
+              <option value="BMW">BMW</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="price">Price Range</label>
+            <select id="price">
+              <option value="">All Prices</option>
+              <option value="0-2000000">₦1M – ₦2M</option>
+              <option value="2000000-5000000">₦2M – ₦5M</option>
+              <option value="5000000-10000000">₦5M – ₦10M</option>
+              <option value="10000000-30000000">₦10M – ₦30M</option>
+              <option value="30000000-999999999">₦30M+</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="location">Location</label>
+            <select id="location">
+              <option value="">All Localities</option>
+              <option value="Lagos">Lagos</option>
+              <option value="Abuja">Abuja</option>
+              <option value="Rivers">Rivers</option>
+              <option value="Oyo">Oyo</option>
+              <option value="Kano">Kano</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-solid search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i> Search
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div class="hero-badge">
+      <img src="https://carloaded.com/assets/static/images/slider/d994144266397b88a61e0f5f967fce29-slider-1.jpg" alt="Porsche Cayman S" class="badge-img" />
+      <span class="badge-eyebrow">Featured</span>
+      <p class="badge-title">Porsche Cayman S</p>
+      <p class="badge-tag">Limited condition drop</p>
+    </div>
+  </section>
+
+  <!-- ===== RECENT LISTINGS ===== -->
+  <section class="listings">
+    <div class="section-head">
+      <h2>Recent Listings</h2>
+      <a href="#" class="view-all">View all <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
+    <div class="listing-grid" id="listing-grid">
+
+      <article class="car-card" data-make="Toyota" data-price="36500000" data-location="Abuja">
+        <div class="car-thumb">
+          <img src="https://eibach.com/storage/img/product-release/2025-2026-toyota-camry-hybrid/featured_image.jpg" alt="Toyota Camry 2023" />
+          <i class="fa-solid fa-car-side thumb-fallback"></i>
+        </div>
+        <div class="car-info">
+          <p class="car-price">₦36,500,000</p>
+          <h3>Toyota Camry 2023</h3>
+          <p class="car-meta">Sedan &middot; Automatic &middot; Asokoro, Abuja</p>
+        </div>
+      </article>
+
+      <article class="car-card" data-make="Mercedes Benz" data-price="68000000" data-location="Abuja">
+        <div class="car-thumb">
+          <img src="https://bloximages.chicago2.vip.townnews.com/insidehalton.com/content/tncms/assets/v3/editorial/5/fd/5fd157dd-c330-5f3c-9474-14c882c34df2/647a1350d308d.image.jpg?resize=1200%2C800" alt="Mercedes Benz GLE 2019" />
+          <i class="fa-solid fa-car-side thumb-fallback"></i>
+        </div>
+        <div class="car-info">
+          <p class="car-price">₦680,000,000</p>
+          <h3>2024 lamborghini huracan</h3>
+          <p class="car-meta">SUV &middot; Automatic &middot; Asokoro, Abuja</p>
+        </div>
+      </article>
+
+      <article class="car-card" data-make="Mercedes Benz" data-price="70000000" data-location="Abuja">
+        <div class="car-thumb">
+          <img src="https://www.usnews.com/object/image/00000192-d323-d878-a1de-d7af4e090000/2025-rx-350-fsport-handling-awd-grecianwater-4-1.jpg?update-time=1730119158512&size=responsiveGallery" alt="Mercedes Benz GLE43 2017" />
+          <i class="fa-solid fa-car-side thumb-fallback"></i>
+        </div>
+        <div class="car-info">
+          <p class="car-price">₦45,000,000</p>
+          <h3>lexus rx350 2025</h3>
+          <p class="car-meta">Coupe &middot; Automatic &middot; Asokoro, Abuja</p>
+        </div>
+      </article>
+
+
+      <article class="car-card" data-make="Mercedes Benz" data-price="70000000" data-location="Abuja">
+        <div class="car-thumb">
+          <img src="https://images.carloaded.com/large/hXserRsXWq5cCWBRgJN9DvlpqG34f84RiFVsXkCMNICCuLq3aD.jpg" alt="Mercedes Benz GLE43 2017" />
+          <i class="fa-solid fa-car-side thumb-fallback"></i>
+        </div>
+        <div class="car-info">
+          <p class="car-price">₦45,000,000</p>
+          <h3>Mercedes Benz C43 2019</h3>
+          <p class="car-meta">Coupe &middot; Automatic &middot; Asokoro, Abuja</p>
+        </div>
+      </article>
+
+
+      <article class="car-card" data-make="Mercedes Benz" data-price="70000000" data-location="Abuja">
+        <div class="car-thumb">
+          <img src="https://images.carloaded.com/large/hXserRsXWq5cCWBRgJN9DvlpqG34f84RiFVsXkCMNICCuLq3aD.jpg" alt="Mercedes Benz GLE43 2017" />
+          <i class="fa-solid fa-car-side thumb-fallback"></i>
+        </div>
+        <div class="car-info">
+          <p class="car-price">₦45,000,000</p>
+          <h3>Mercedes Benz C43 2019</h3>
+          <p class="car-meta">Coupe &middot; Automatic &middot; Asokoro, Abuja</p>
+        </div>
+      </article>
+
+      <article class="car-card" data-make="Mercedes Benz" data-price="37000000" data-location="Lagos">
+        <div class="car-thumb">
+          <img src="https://images.carloaded.com/large/SX9jn8ur79Wbkqnzs0PQgoocXKPte1b8c9GaviEm0bHF5UT8Iq.jpg" alt="Mercedes Benz GLE 2017" />
+          <i class="fa-solid fa-car-side thumb-fallback"></i>
+        </div>
+        <div class="car-info">
+          <p class="car-price">₦70,000,000</p>
+          <h3>Bmw 520i 2026 </h3>
+          <p class="car-meta">SUV &middot; Automatic &middot; Yaba, Lagos</p>
+        </div>
+      </article>
+
+      <p class="no-results" id="no-results" hidden>No cars match those filters — try widening your search.</p>
+
+    </div>
+  </section>
+
+  <!-- ===== BROWSE BY TYPE ===== -->
+  <section class="body-types">
+    <div class="section-head center">
+      <h2>Browse by Body Type</h2>
+    </div>
+
+    <div class="type-grid">
+      <a href="#" class="type-card"><img src="https://carloaded.com/assets/static/images/193b95195323d93a960e88511b7e2b67-browse-1.png"><span>CONVERTIBLE</span></a>
+      <a href="#" class="type-card"><img src="https://carloaded.com/assets/static/images/1d22e702488c14c3ecfad6949ee0db77-browse-2.png"><span>COUPE</span></a>
+      <a href="#" class="type-card"><img src="https://carloaded.com/assets/static/images/2ac359068d2af6bea19079bb4fed91e4-browse-3.png"><span>CROSSOVER</span></a>
+      <a href="#" class="type-card"><img src="https://carloaded.com/assets/static/images/241b98802144401fafa8e3b9637d3604-browse-4.png"><span>HATCHBACK</span></a>
+      <a href="#" class="type-card"><img src="https://carloaded.com/assets/static/images/674a9494d0c75930a01ad4e02202c727-browse-5.png"><span>PICK UP TRUCK</span></a>
+      <a href="#" class="type-card"><img src="https://carloaded.com/assets/static/images/e018689b322c437ea7d4645bb4808b3c-browse-6.png"><span>SEDAN</span></a>
+      <a href="#" class="type-card"><img src="https://carloaded.com/assets/static/images/ba60927928d7690b321cdf6322c41938-browse-7.png"><span>SPORT CARS</span></a>
+      <a href="#" class="type-card"><img src="https://carloaded.com/assets/static/images/f8192447c46d7d6755f97da3a5aa107f-browse-8.png"><span>SUV</span></a>
+    </div>
+  </section>
+
+  <!-- ===== WHY USE US ===== -->
+  <section class="why-us">
+    <div class="section-head">
+      <h2>Why Use BestBuy</h2>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card">
+        <span class="why-num">01</span>
+        <h3>Best cars from many dealerships</h3>
+        <p>
+          Nigerian used and foreign used cars at your disposal. Contact
+          sellers directly, browse thousands of verified listings, and
+          get a free car report before you buy.
+        </p>
+      </div>
+
+      <div class="why-card">
+        <span class="why-num">02</span>
+        <h3>Fast, accurate car information</h3>
+        <p>
+          Reach sellers directly and buy your car or truck with
+          confidence — search thousands of cars from the convenience
+          of your phone.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="logo">Best<span>Buy</span></a>
+        <p>AutoYard is a car marketplace that connects car shoppers with sellers across Nigeria.</p>
+        <p class="footer-contact"><i class="fa-solid fa-location-dot"></i> Lekki, Lagos</p>
+        <div class="footer-social">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Links</h4>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Blog</a>
+        <a href="#">Sellers</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Popular Makes</h4>
+        <a href="#">Toyota</a>
+        <a href="#">Mercedes Benz</a>
+        <a href="#">Lexus</a>
+        <a href="#">Honda</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>By Location</h4>
+        <a href="#">Lagos</a>
+        <a href="#">Abuja</a>
+        <a href="#">Rivers</a>
+        <a href="#">Oyo</a>
+      </div>
+
+      <div class="footer-col newsletter">
+        <h4>Newsletter</h4>
+        <p>Get new listings in your inbox.</p>
+        <form class="newsletter-form" id="newsletter-form">
+          <input type="email" placeholder="Your email" required />
+          <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+        <p class="newsletter-msg" id="newsletter-msg" hidden>Thanks — you're subscribed.</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; BestBuy.com</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
